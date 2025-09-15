@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style_index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+      <h1>MAN........ </h1>
+      <h3>Se un giorno funzionerà, potrai registrare<br> qui le tue manutenzioni.<br>La vedo ancora grigia.</h3>
+      </div>
+
+      <div class="form_login">
+      <!-- apertura del form -->
+      <form method="post" action="check_user.php">
+        <span>
+          <label for="username" name="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            required
+            maxlength="20"
+            title="Max 20 caratteri"
+          /><br />
+          <label for="psw" name="psw">Password</label>
+          <input
+            type="password"
+            required
+            maxlength="10"
+            title="Max 10 caratteri"
+            name="psw"
+          />
+        </span><br/>
+        <span class="buttons">
+          <input type="submit" value="Accedi" />
+        <input type="button" value="Registrati" id="form" onclick="openmodal()"></input>
+        </span>
+          </form>
+      </div>
+        <br /><br />
+
+        <!-- inserisco un div nascosto per il risultato della query -->
+        <div id="result" style="display: none"></div>
+      </div>
+      <br /><br />
+
+      <!-- creo un form da nascondere per la registrazione utente -->
+      <div id="form_register" style="display: none">
+        <form id="register_form">
+          <label for="title">Inserisci i tuoi dati</label><br />
+          <label for="nome">Nome</label>
+          <input
+            type="text"
+            name="nome"
+            required
+            maxlength="20"
+            title="Max 20 caratteri"
+          /><br />
+          <label for="cognome">Cognome</label>
+          <input
+            type="text"
+            name="cognome"
+            required
+            maxlength="40"
+            title="Max 40 caratteri"
+          /><br />
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            required
+            maxlength="20"
+            title="Max 20 caratteri"
+          /><br />
+          <label for="psw">Password</label>
+          <input
+            type="password"
+            name="psw"
+            required
+            minlength="5"
+            maxlength="10"
+            title="Max 10 caratteri"
+          /><br />
+          <input type="submit" value="Registrati" /><br />
+          <input type="button" value="Indietro" id="close" onclick="closemodal()">
+            
+          </input>
+        </form>
+      </div>
+      <!-- chiusura div registrazione utente -->
+      <footer>
+        <div class="footer">
+          <span>contatti</span>
+          <span>Il mio curriculum</span>
+          <span>Versioni</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="functions_index.js"></script>
+  </body>
+</html>

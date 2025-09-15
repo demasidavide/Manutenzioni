@@ -1,0 +1,226 @@
+:root{
+    --text-title-color:#E62727;
+    --text-color:black;
+    --back-color: #F3F2EC;
+    --div-color: #DCDCDC;
+    --blu-color:#1e94ab;
+    --foot-color: #ffffff;
+}
+
+body {
+    background-color: var(--back-color);
+}
+
+.container_header{
+    border-radius: 20px;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+     > #hello{
+        
+        border-radius: 20px;
+        height: 100%;
+        padding: 10px 20px 10px 20px;
+        width: fit-content;
+        background-color: var(--blu-color);
+        color: var(--back-color);
+        
+        
+      }
+
+     > .head {
+        margin-left: 21px;
+        margin-right: 21px;
+        padding-left: 20px;
+        border-radius: 20px;
+        height: fit-content;
+        width: 100%;       
+        background-color: var(--div-color);
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px;
+
+        > .riga_sopra {
+            text-align: center;
+            border-radius: 20px;
+            height: 25px;
+            padding: 4px 13px 0px 10px;
+            width: fit-content;
+            margin-top: 12px;
+            background-color: var(--text-title-color);
+            color: var(--foot-color);
+            cursor: pointer;
+        }
+
+        >#logout{
+            margin-left: auto;
+            margin-right: 20px;
+            text-align: center;
+            border-radius: 20px;
+            height: 25px;
+            padding: 4px 13px 0px 10px;
+            width: fit-content;
+            margin-top: 12px;
+            background-color: var(--blu-color);
+            color: var(--foot-color);
+            cursor: pointer;
+            
+        }
+    }
+}
+span:hover{
+    filter: saturate(200%) hue-rotate(0deg) brightness(1);
+    outline: solid 2px white;
+}
+
+/* -------------------COLONNE CENTRALI-------------------- */
+.container {
+    display: flex;
+    flex-direction: row;
+    color: rgb(235, 226, 226);
+    
+}
+h3{
+    color: var(--text-color);
+}
+.colonna1,
+.colonna2,
+.colonna3 {
+    background-color: var(--div-color);
+    overflow: y 1px;
+    overflow-y: auto;
+    padding-left: 24px;
+    margin-left: 5px;
+    margin-top: 5px;
+    max-height: 760px;
+    min-width: fit-content;
+    
+}
+.colonna1:hover,
+.colonna2:hover,
+.colonna3:hover {
+    outline:1px solid rgb(255, 255, 255);
+}
+.colonna1 {
+    height: 77%;
+    width: 15%;
+}
+.colonna2 {
+    height: 100%;
+    width: 20%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(119, 120, 143);
+    text-decoration: double;
+    position: fixed;
+    width: 100%;
+    bottom: 50px;
+}
+
+.footer {
+    color: rgb(233, 26, 54);
+    margin: 30px;
+}
+
+
+input[type="submit"], input[type="button"]{
+    height: 25px;
+    width: 100px;
+    margin-top: 12px;
+    background-color: var(--text-title-color);
+    color: var(--foot-color);
+}
+
+input[type="submit"]:hover, input[type="button"]:hover{
+    cursor: pointer;
+    color: var(--foot-color);
+    font-weight: bold;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input {
+    padding-left: 10px;
+    height: 25px;
+    gap: 10px;
+    box-shadow: none;
+    border:none;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+#new_machine, #canc_macchina, #add_intervento {
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 800px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(237, 239, 240);
+}
+       #new_mac, #del_mac, #add_int {
+
+        border-radius: 20px;
+        border:solid black 3px ;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(237, 239, 240);
+ }
+ 
+#result{
+
+    border-radius: 20px;
+    border: solid rgb(24, 187, 46) 3px; 
+    padding: 30px;
+    position: fixed;
+    display: flex;
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width:fit-content;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(152, 201, 152);
+    
+}
+
+table tr.selected {
+    background-color: #d4edda;
+    
+
+}
+
+/* IMMAGINI CANCELLAZIONE E AGGIUNTA INTERVENTO(BIDONE,+) */
+img {
+    height: 25px;
+    width: 25px;
+}
+img:hover{
+   filter: saturate(200%) hue-rotate(0deg) brightness(1);
+   outline: solid 2px white;
+}
+
+td,tr.table{color:black;}

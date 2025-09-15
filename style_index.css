@@ -1,0 +1,127 @@
+:root{
+    --text-title-color:#E62727;
+    --text-color:black;
+    --back-color: #F3F2EC;
+    --div-color: #DCDCDC;
+    --blu-color:#1e94ab;
+    --foot-color: #ffffff;
+}
+html{
+    width: 100%;
+    height: 100%;
+
+}
+body{
+    
+    background-color: var(--back-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    background-color:var(--blu-color);
+    margin-top: 150px;
+    height: 379px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px grey;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap:20px;
+    padding: 40px;
+
+    > .main{
+        background-color: var(--div-color);
+        border-radius: 20px;
+        padding: 10px;
+       
+        > h1{
+            background-color: var(--foot-color);
+            color: var(--text-title-color);
+            font-size: 47px;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+        > h3{
+           font-size: 25px;
+            text-align:  left;
+        }
+    }
+
+    > .form_login{
+        background-color: var(--div-color);
+        border-radius: 20px;
+        height: 300px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+    }
+}
+
+input[type="submit"], input[type="button"]{
+    height: 25px;
+    width: 100px;
+    margin-top: 12px;
+    background-color: var(--text-title-color);
+    color: var(--foot-color);
+}
+
+input[type="submit"]:hover, input[type="button"]:hover{
+    cursor: pointer;
+    filter: saturate(200%) hue-rotate(0deg) brightness(1);
+    outline: solid 2px white;
+}
+
+input {
+    padding-left: 10px;
+    height: 25px;
+    gap: 10px;
+    box-shadow: none;
+    border:none;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+footer{
+    background-color: var(--foot-color);  
+    position:fixed;
+    width: 100%;
+    height: 20%;
+    bottom: 20px;
+    margin-bottom: 0px;
+}
+
+#form_register form{
+    border-radius: 20px;
+    border:solid black 3px ;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    height: 500px;
+    width: 800px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: rgb(237, 239, 240);
+
+    > input[type="button"]{
+        color:var(--text-color);
+        background-color: var(--foot-color);
+    }
+}
+
+#result{
+    font-size: 30px;
+    background-color: antiquewhite;
+    border: solid black 3px;
+}
