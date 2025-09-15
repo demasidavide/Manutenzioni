@@ -186,6 +186,7 @@ include 'db_connection.php';
      <!-- div per nascosto per visualizzare risultato -->
       <div id="result" style="display: none;"></div>
       <br /><br />
+      <div>jgekbgndong</div>
 
       <!-- link al file .js -->
      <script src="functions_main.js"></script>
