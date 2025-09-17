@@ -57,7 +57,7 @@ include 'db_connection.php';
         <td><?php echo htmlspecialchars($row['tipo']); ?>&nbsp&nbsp&nbsp&nbsp</td>
             <td><img id="bid" src="bid.jpg" title="Cancella macchina" onclick="openmodal_delete_machine('<?php echo $row['id_mac']; ?>','<?php echo htmlspecialchars($row['nome']); ?>','<?php echo htmlspecialchars($row['tipo']); ?>','<?php echo htmlspecialchars($row['area']); ?>')"></td>
             <td><img id="piu" src="+.jpg" title="Aggiungi un intervento" onclick="openmodal_add_support()"></td>
-            <td><img id="piu" src="frecciad.jpg" title="Visualizza interventi effettuati" data-id="<?php echo $row['id_mac'];?>"></td></tr>
+            <td><img id="fdx" src="frecciad.jpg" title="Visualizza interventi effettuati" onclick="openmodal_view_support(<?php echo $row['id_mac'];?>)" ></td></tr>
         <tr><td><?php echo htmlspecialchars($row['area']); ?></td></tr>
         <tr><td>ID:<?php echo htmlspecialchars($row['id_mac']); ?></td></tr>
     <?php } ?>
@@ -96,10 +96,17 @@ include 'db_connection.php';
     </table>
     <?php }?>
                 </div>
-                
       </div>
-      <div class="colonna3">
-                <h3>Eventi programmati:</h3>
+
+      <!-- INIZIO COLONNA 3 -->
+      <div class="colonna3" style="display:none">
+        <div class="titolo-colonna">
+          <h3>INTERVENTI PER MACCHINA SELEZIONATA<svg onclick='closemodal_view_support()' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+    </svg>
+  </h3>
+        </div>
+        
       </div>
       <footer>
         <div>
@@ -183,7 +190,7 @@ include 'db_connection.php';
              <span><textarea name="descrizione" rows="8" cols="70" placeholder="Descrivi l'intervento effettuato..." maxlength="500" required></textarea></span>
           </span><br>
           <input type="hidden" name="id"><?php $_SESSION["id"]; ?>
-          <input type="hidden" name="id_macchina"><?php echo $row2["id_mac"]; ?>
+          <input type="hidden" name="id_macchina" value= "<?php echo $row2['id_mac']; ?>">
           <input type="submit" name="invio" value="Inserisci"> 
           <button type="button" id="close_delete" onclick="closemodal_add_support()">Indietro</button>
         </form>

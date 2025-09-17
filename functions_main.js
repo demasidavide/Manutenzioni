@@ -102,4 +102,26 @@ document.getElementById('add_int').onsubmit = function(e) {
 
 //---------------FUNZIONE PER FAR APPARIRE SERIE DI INTERVENTI PER OGNI MACCHINA SELEZIONATA------------------//
 
+function openmodal_view_support(id_mac){
+  const colonna3 = document.getElementsByClassName('colonna3')[0];
+  colonna3.style.display = "block";
+  fetch('get_machine_support.php?id_mac=' + id_mac)
+    .then(response => response.text())
+    .then(html => {
+      // Mantieni il titolo-colonna e aggiungi gli interventi sotto
+      colonna3.innerHTML = `
+        <div class="titolo-colonna">
+          <h3>INTERVENTI PER MACCHINA SELEZIONATA
+            <svg onclick='closemodal_view_support()' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </h3>
+        </div>
+        ${html}
+      `;
+    });
+}
 
+function closemodal_view_support(){
+  document.getElementsByClassName('colonna3')[0].style.display ="none";
+}

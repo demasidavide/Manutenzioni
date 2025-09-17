@@ -94,6 +94,15 @@ span:hover{
     top: 0;
     background-color: var(--div-color);
     color: var(--text-color);
+     >h3 >svg{
+                top: 2px;
+                position: relative;
+                margin: 0px 20px 0px 20px;
+                color: var(--foot-color);
+                border-radius: 9px;
+                background-color: var(--text-title-color);
+                height: 17px;
+     }
 }
 
 .colonna1,
