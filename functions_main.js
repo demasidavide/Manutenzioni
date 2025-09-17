@@ -96,7 +96,7 @@ document.getElementById('add_int').onsubmit = function(e) {
     document.getElementById('result').innerText = data;
     showresult();
     document.getElementById("add_int").reset();
-    closemodal_closemodal_add_support();
+    closemodal_add_support();
   });
 };
 

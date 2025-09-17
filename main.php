@@ -69,11 +69,11 @@ include 'db_connection.php';
       <!-- INIZIO COLONNA 2 -->
       <div class="colonna2">
         <div class="titolo-colonna">
-          <h3>MANUTENZIONI</h3>
+          <h3>MANUTENZIONI INSERITE</h3>
         </div>
                 <div id="interventi" style="display:show">
                   <?php
-         $lettura_man=("SELECT * FROM intervento WHERE id_mac= 7;");
+         $lettura_man=("SELECT * FROM intervento ORDER BY 'giorno' desc;");
          $result_tabella_man=mysqli_query($conn,$lettura_man);
          if($result_tabella_man){
          ?>
