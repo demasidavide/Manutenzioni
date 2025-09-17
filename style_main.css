@@ -86,9 +86,16 @@ span:hover{
     color: rgb(235, 226, 226);
     
 }
-h3{
+
+.titolo-colonna{
+    display: flex;
+    border-bottom: #ffffff 2px solid;
+    position: sticky;
+    top: 0;
+    background-color: var(--div-color);
     color: var(--text-color);
 }
+
 .colonna1,
 .colonna2,
 .colonna3 {

@@ -31,9 +31,14 @@ include 'db_connection.php';
     </div>
     </div>
 
+    <!-- container colonne centrali -->
     <div class="container">
+
+      <!-- inizio COLONNA 1 -->
       <div class="colonna1">
-        <h3>Macchine:</h3>
+        <div class="titolo-colonna">
+          <h3>MACCHINE</h3>
+        </div>
 
         <!-- inserisco query per generare tabella e tabella -->
          <?php
@@ -60,8 +65,12 @@ include 'db_connection.php';
     </table>
     <?php }?>
       </div>
+
+      <!-- INIZIO COLONNA 2 -->
       <div class="colonna2">
-                <h3>Manutenzioni:</h3>
+        <div class="titolo-colonna">
+          <h3>MANUTENZIONI</h3>
+        </div>
                 <div id="interventi" style="display:show">
                   <?php
          $lettura_man=("SELECT * FROM intervento WHERE id_mac= 7;");
@@ -86,9 +95,6 @@ include 'db_connection.php';
               </tbody>
     </table>
     <?php }?>
-
-
-
                 </div>
                 
       </div>
