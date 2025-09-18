@@ -11,6 +11,23 @@ body {
     background-color: var(--back-color);
 }
 
+::-webkit-scrollbar {
+    background-color: var(--foot-color);
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    width: 10px;
+    background: var(--foot-color);
+    border: solid var(--foot-color) 1px ;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: var(--blu-color);
+    border: solid var(--blu-color) 3px ;
+    border-radius: 20px;
+}
+
 .container_header{
     border-radius: 20px;
     width: 100%;
