@@ -23,7 +23,7 @@ include 'db_connection.php';
       <!-- a fine pagina aggiungo div nascosti con i form inserimento -->
       <span class="riga_sopra" onclick="openmodal_add_machine()">Aggiungi macchina</span>
       <span class="riga_sopra" onclick="openmodal_add_support()">Aggiungi intervento</span>
-      <span class="riga_sopra">dove vivo</span>
+      <span class="riga_sopra">Aggiungi programmata</span>
       <span class="riga_sopra">sono grasso</span>
       
       <!-- bottone per logout -->
@@ -170,8 +170,8 @@ include 'db_connection.php';
       <!-- DIV NASCOSTO PER INSERIMENTO INTERVENTO DA RIGA HEADER  -->
        <div id="add_intervento" style="display:none">
         <form id="add_int" method="POST" action="">
-          <label for="descrizione">Inserisci nuovo intervento:</label><br><br>
-          <span>Seleziona macchina:
+          <label for="descrizione">Inserisci nuovo intervento</label><br><br>
+          <span>Seleziona macchina
             
               <?php 
               $lettura2=("SELECT nome,id_mac FROM macchina;");
@@ -187,7 +187,7 @@ include 'db_connection.php';
 
             </select>
           </span><br>
-          <span>Motivo dell' intervento:
+          <span>Motivo dell' intervento
              <select name="tipo">
               <option value=""></option>
               <option value="guasto">Guasto</option>
@@ -196,13 +196,13 @@ include 'db_connection.php';
              <span>Ora e Data di esecuzione:</span>
              <span><input type="date" name="data"></span>
              <span><input type="time" name="ora"></span><br>
-             <span>Descrizione intervento:</span><br>
+             <span>Descrizione intervento</span><br>
              <span><textarea name="descrizione" rows="8" cols="70" placeholder="Descrivi l'intervento effettuato..." maxlength="500" required></textarea></span>
           </span><br>
           <input type="hidden" name="id"><?php $_SESSION["id"]; ?>
           <input type="hidden" name="id_macchina" value= "<?php echo $row2['id_mac']; ?>">
           <input type="submit" name="invio" value="Inserisci"> 
-          <button type="button" id="close_delete" onclick="closemodal_add_support()">Indietro</button>
+          <input type="button" value="Indietro" id="close_delete" onclick="closemodal_add_support()"></input>
         </form>
        </div>
 

@@ -192,20 +192,32 @@ footer {
     margin: 30px;
 }
 
-
-input[type="submit"], input[type="button"]{
+input[type="submit"]{
     height: 25px;
     width: 100px;
     margin-top: 12px;
     background-color: var(--text-title-color);
     color: var(--foot-color);
 }
+input[type="button"]{
+    height: 25px;
+    width: 100px;
+    margin-top: 12px;
+    background-color: var(--foot-color);
+    color: var(--text-color);
+}
 
-input[type="submit"]:hover, input[type="button"]:hover{
+input[type="submit"]:hover{
     cursor: pointer;
     color: var(--foot-color);
-    font-weight: bold;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: saturate(200%) hue-rotate(0deg) brightness(1);
+    outline: solid 2px white;
+}
+input[type="button"]:hover{
+    cursor: pointer;
+    color: var(--text-color);
+    filter: saturate(200%) hue-rotate(0deg) brightness(1);
+    outline: solid 2px white;
 }
 
 input {
