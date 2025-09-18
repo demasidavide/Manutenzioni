@@ -106,6 +106,13 @@ include 'db_connection.php';
     </svg>
   </h3>
         </div>
+              </div>
+
+         <!-- INIZIO COLONNA 4 -->
+     <div class="colonna4">
+        <div class="titolo-colonna4">
+          <h3>ASSISTENZE PROGRAMMATE</h3>
+        </div>
         
       </div>
       <footer>
@@ -117,6 +124,9 @@ include 'db_connection.php';
         
       </footer>
     </div>
+
+   
+
 
 <!-- -------------------DIV NASCOSTI------------------------ -->
 

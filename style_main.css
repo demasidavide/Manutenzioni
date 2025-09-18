@@ -12,16 +12,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-    background-color: var(--foot-color);
+    
+    background-color: var(--back-color);
     width: 5px;
 }
 ::-webkit-scrollbar-track {
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 10px;
-    background: var(--foot-color);
-    border: solid var(--foot-color) 1px ;
+    background: var(--back-color);
+    border: solid var(--back-color) 1px ;
     border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb {
+    
+    margin-top: 20px;
     width: 10px;
     background: var(--blu-color);
     border: solid var(--blu-color) 3px ;
@@ -98,6 +103,8 @@ span:hover{
 
 /* -------------------COLONNE CENTRALI-------------------- */
 .container {
+    width: 100%;
+    padding-right: 20px;
     display: flex;
     flex-direction: row;
     color: rgb(235, 226, 226);
@@ -124,7 +131,8 @@ span:hover{
 
 .colonna1,
 .colonna2,
-.colonna3 {
+.colonna3,
+.colonna4 {
     background-color: var(--div-color);
     overflow: y 1px;
     overflow-y: auto;
@@ -133,7 +141,6 @@ span:hover{
     margin-top: 5px;
     max-height: 760px;
     min-width: fit-content;
-    
 }
 .colonna1:hover,
 .colonna2:hover,
@@ -150,7 +157,26 @@ span:hover{
     height: 100%;
     width: 20%;
 }
-
+.colonna3{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.titolo-colonna4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blu-color);
+    border-radius: 20px;
+}
+.colonna4{
+    background-color: var(--div-color);
+    padding-right: 20px;
+    border-radius: 20px;
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    right: 190px;
+}
 footer {
     display: flex;
     justify-content: center;
