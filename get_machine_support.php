@@ -23,6 +23,6 @@ if ($result && mysqli_num_rows($result) > 0) {
     }
     echo '</tbody></table>';
 } else {
-    echo '<div>Nessun intervento trovato per questa macchina.</div>';
+    echo '<div><h1 style="color:black">Nessun intervento trovato<br>per questa macchina.</h1></div>';
 }
 ?>
