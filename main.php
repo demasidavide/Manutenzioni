@@ -113,6 +113,19 @@ include 'db_connection.php';
         <div class="titolo-colonna4">
           <h3>ASSISTENZE PROGRAMMATE</h3>
         </div>
+
+        <?php
+        $letturaintp=("SELECT * FROM interventop;");
+        $result_tabella_intp = mysqli_query($conn,$letturaintp);
+        if($result_tabella_intp){
+          while($row_intp=mysqli_fetch_assoc($result_tabella_intp)){
+           echo" <span>jdjdjjdhfjdf</span>";
+          }
+        }else{
+          echo"lettura non riuscita";
+        }
+        ?>
+        <span class="riga-progr"></span>
         
       </div>
       <footer>
@@ -124,9 +137,6 @@ include 'db_connection.php';
         
       </footer>
     </div>
-
-   
-
 
 <!-- -------------------DIV NASCOSTI------------------------ -->
 
@@ -206,18 +216,9 @@ include 'db_connection.php';
         </form>
        </div>
 
-       <!-- DIV NASCOSTO PER INSERIMENTO INTERVENTO DA TASTO + -->
-       <div id="add_intervento+" style="display:none">
-        <form id="add_int+" method="POST" action="">
-          <label for="descrizione">Inserisci nuovo intervento</label><br><br>
-          
-        </form>
-       </div>
-
      <!-- div per nascosto per visualizzare risultato -->
       <div id="result" style="display: none;"></div>
       <br /><br />
-      
 
       <!-- link al file .js -->
      <script src="functions_main.js"></script>

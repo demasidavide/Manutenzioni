@@ -277,15 +277,10 @@ input {
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgb(152, 201, 152);
-    
 }
-
 table tr.selected {
     background-color: #d4edda;
-    
-
 }
-
 /* IMMAGINI CANCELLAZIONE E AGGIUNTA INTERVENTO(BIDONE,+) */
 img {
     height: 25px;
@@ -295,5 +290,4 @@ img:hover{
    filter: saturate(200%) hue-rotate(0deg) brightness(1);
    outline: solid 2px white;
 }
-
 td,tr.table{color:black;}
