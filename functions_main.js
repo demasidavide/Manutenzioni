@@ -75,8 +75,12 @@ document.getElementById('del_mac').onsubmit = function(e) {
 // -------FUNZIONE PER INSERIMENTO INTERVENTI------------
 // NASCONDI APRI DIV INSERIMENTO INTERVENTO
 
-function openmodal_add_support(){
+function openmodal_add_support(id_mac){
   document.getElementById('add_intervento').style.display="block";
+  const select = document.querySelector('#add_intervento select[name="macchina"]');
+  if (select) {
+    select.value = id_mac;
+  }
 }
 function closemodal_add_support(){
   document.getElementById('add_intervento').style.display="none";
@@ -125,3 +129,5 @@ function openmodal_view_support(id_mac){
 function closemodal_view_support(){
   document.getElementsByClassName('colonna3')[0].style.display ="none";
 }
+
+// -------FUNZIONE PER INSERIMENTO INTERVENTI DA TASTO + ------------//

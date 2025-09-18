@@ -56,7 +56,7 @@ include 'db_connection.php';
         <tr><td><?php echo htmlspecialchars($row['nome']); ?></td></tr>
         <td><?php echo htmlspecialchars($row['tipo']); ?>&nbsp&nbsp&nbsp&nbsp</td>
             <td><img id="bid" src="bid.jpg" title="Cancella macchina" onclick="openmodal_delete_machine('<?php echo $row['id_mac']; ?>','<?php echo htmlspecialchars($row['nome']); ?>','<?php echo htmlspecialchars($row['tipo']); ?>','<?php echo htmlspecialchars($row['area']); ?>')"></td>
-            <td><img id="piu" src="+.jpg" title="Aggiungi un intervento" onclick="openmodal_add_support()"></td>
+            <td><img id="piu" src="+.jpg" title="Aggiungi un intervento" onclick="openmodal_add_support(<?php echo $row['id_mac'];?>)"></td>
             <td><img id="fdx" src="frecciad.jpg" title="Visualizza interventi effettuati" onclick="openmodal_view_support(<?php echo $row['id_mac'];?>)" ></td></tr>
         <tr><td><?php echo htmlspecialchars($row['area']); ?></td></tr>
         <tr><td>ID:<?php echo htmlspecialchars($row['id_mac']); ?></td></tr>
@@ -163,7 +163,7 @@ include 'db_connection.php';
           <span id="iddm"></span><br>
           <input type="hidden" name="idmacch" id="idinvio">
           <input type="submit" value="Confermare?" id="invioid"><br>
-          <button type="button" id="close_delete" onclick="closemodal_delete_machine()">Indietro</button>
+          <input type="button" value="Indietro" id="close_delete" onclick="closemodal_delete_machine()"></input>
         </form>
       </div>
 
@@ -206,10 +206,18 @@ include 'db_connection.php';
         </form>
        </div>
 
+       <!-- DIV NASCOSTO PER INSERIMENTO INTERVENTO DA TASTO + -->
+       <div id="add_intervento+" style="display:none">
+        <form id="add_int+" method="POST" action="">
+          <label for="descrizione">Inserisci nuovo intervento</label><br><br>
+          
+        </form>
+       </div>
+
      <!-- div per nascosto per visualizzare risultato -->
       <div id="result" style="display: none;"></div>
       <br /><br />
-      <div>jgekbgndong</div>
+      
 
       <!-- link al file .js -->
      <script src="functions_main.js"></script>
