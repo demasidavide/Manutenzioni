@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Login</title>
     <link rel="stylesheet" href="/assets/index/style_index.css" />
+    <link rel="icon" href="/assets/img/+.jpg" type="image">
   </head>
   <body>
     <div class="container">
@@ -29,7 +30,6 @@
       </div>
         <br /><br />
         <!-- inserisco un div nascosto per il risultato della query -->
-        <div id="result" style="display: none"></div>
       </div>
       <br /><br />
       <!-- creo un form da nascondere per la registrazione utente -->
@@ -45,8 +45,9 @@
           <label for="psw">Password</label>
           <input type="password" name="psw" required minlength="5" maxlength="10" title="Max 10 caratteri"/><br />
           <input type="submit" value="Registrati" /><br />
-          <input type="button" value="Indietro" id="close">
-          </input>
+          <input type="button" value="Indietro" id="close"></input>
+          <span id="result" class="result-no" style="display: none">Registrazione avvenuta con successo</span>
+
         </form>
       </div>
       <!-- chiusura div registrazione utente -->
