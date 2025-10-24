@@ -1,5 +1,5 @@
 <?php
-require_once "db_connection.php";
+require_once "../../db_connection.php";
 
 $nome=$_POST["nome"];
 $cognome=$_POST["cognome"];

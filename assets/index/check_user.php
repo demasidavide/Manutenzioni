@@ -1,7 +1,7 @@
 <?php
 session_start();
 // includo db_connection per connessione al db
-include "db_connection.php";
+include "../../db_connection.php";
 // acquisisco dati da index.html
 $user=$_POST["username"];
 $psw=$_POST["psw"];
@@ -31,7 +31,7 @@ if($num_rows){
         
         <br>
         <span>
-        <button><a href="index.html">Indietro</a></button>
+        <button><a href="/index.html">Indietro</a></button>
         </span>
     </body>
     <?php
