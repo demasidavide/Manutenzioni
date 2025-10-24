@@ -12,13 +12,11 @@ html{
 
 }
 body{
-    
     background-color: var(--back-color);
     display: flex;
     justify-content: center;
     text-align: center;
 }
-
 .container{
     background-color:var(--blu-color);
     margin-top: 150px;

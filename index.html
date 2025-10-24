@@ -11,7 +11,6 @@
       <h1>MAN........ </h1>
       <h3>Se un giorno funzionerà, potrai registrare<br> qui le tue manutenzioni.<br>La vedo ancora grigia.</h3>
       </div>
-
       <div class="form_login">
       <!-- apertura del form -->
       <form method="post" action="check_user.php">
@@ -25,22 +24,16 @@
             title="Max 20 caratteri"
           /><br />
           <label for="psw" name="psw">Password</label>
-          <input
-            type="password"
-            required
-            maxlength="10"
-            title="Max 10 caratteri"
-            name="psw"
-          />
+          <input type="password" required maxlength="10" title="Max 10 caratteri" name="psw" />
         </span><br/>
         <span class="buttons">
           <input type="submit" value="Accedi" />
         <input type="button" value="Registrati" id="form" onclick="openmodal()"></input>
         </span>
           </form>
+          <!-- CHIUSURA FORM -->
       </div>
         <br /><br />
-
         <!-- inserisco un div nascosto per il risultato della query -->
         <div id="result" style="display: none"></div>
       </div>

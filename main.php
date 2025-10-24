@@ -119,7 +119,7 @@ include 'db_connection.php';
         $result_tabella_intp = mysqli_query($conn,$letturaintp);
         if($result_tabella_intp){
           while($row_intp=mysqli_fetch_assoc($result_tabella_intp)){
-           echo" <span>jdjdjjdhfjdf</span>";
+           echo" <span>". $row_intp["orap"] . "</span>";
           }
         }else{
           echo"lettura non riuscita";
