@@ -1,11 +1,14 @@
-// per mostratre la pagina di registrazione
-function openmodal(){
-    document.getElementById("form_register").style.display= 'block';
-}
-// per nascondere la pagina di registrazione
-function closemodal(){
-    document.getElementById("form_register").style.display="none";
-}
+// mostra pagina di registrazione
+let register=document.getElementById("form");
+register.addEventListener('click', ()=>{
+  document.getElementById("form_register").style.display= 'block';
+});
+//nascondi pagina di registrazione
+let closeRegister=document.getElementById("close");
+closeRegister.addEventListener('click', ()=>{
+document.getElementById("form_register").style.display='none'
+})
+
 // funzione per nascondere div risultato inserimento
 function showresult(){
     document.getElementById("result").style.display="block";
