@@ -1,13 +1,11 @@
 // mostra pagina di registrazione
-let register=document.getElementById("form");
-register.addEventListener('click', ()=>{
+document.getElementById("form").addEventListener('click',()=>{
   document.getElementById("form_register").style.display= 'block';
 });
 //nascondi pagina di registrazione
-let closeRegister=document.getElementById("close");
-closeRegister.addEventListener('click', ()=>{
-document.getElementById("form_register").style.display='none'
-})
+document.getElementById("close").addEventListener('click', ()=>{
+document.getElementById("form_register").style.display='none';
+});
 
 // funzione per nascondere div risultato inserimento
 function showresult(){
