@@ -9,9 +9,8 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 73px;
+    height: 27px;
     width: 276px;
-    border-bottom: solid rgb(230, 35, 35) 6px;
     margin:100px auto 0px auto;
     display:block;  
     padding-bottom: 10px;
@@ -23,7 +22,6 @@ span{
     width: auto;
     align-items: center;
 }   
-    
 }    
     
    

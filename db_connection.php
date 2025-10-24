@@ -8,7 +8,6 @@ $db_name="manutenzioni";
  try{
   $conn=new mysqli($ip,$user,$psw,$db_name);
   }catch(Exception $e){
-     
     die("Connessione fallita". $e->getMessage());
   }
   ?>
