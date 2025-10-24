@@ -16,13 +16,7 @@
       <form method="post" action="/assets/index/check_user.php">
         <span>
           <label for="username" name="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            required
-            maxlength="20"
-            title="Max 20 caratteri"
-          /><br />
+          <input type="text" name="username" required maxlength="20" title="Max 20 caratteri"/><br />
           <label for="psw" name="psw">Password</label>
           <input type="password" required maxlength="10" title="Max 10 caratteri" name="psw" />
         </span><br/>
@@ -38,44 +32,18 @@
         <div id="result" style="display: none"></div>
       </div>
       <br /><br />
-
       <!-- creo un form da nascondere per la registrazione utente -->
       <div id="form_register" style="display: none">
         <form id="register_form">
           <label for="title">Inserisci i tuoi dati</label><br />
           <label for="nome">Nome</label>
-          <input
-            type="text"
-            name="nome"
-            required
-            maxlength="20"
-            title="Max 20 caratteri"
-          /><br />
+          <input type="text" name="nome" required maxlength="20" title="Max 20 caratteri"/><br />
           <label for="cognome">Cognome</label>
-          <input
-            type="text"
-            name="cognome"
-            required
-            maxlength="40"
-            title="Max 40 caratteri"
-          /><br />
+          <input type="text" name="cognome" required maxlength="40" title="Max 40 caratteri"/><br />
           <label for="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            required
-            maxlength="20"
-            title="Max 20 caratteri"
-          /><br />
+          <input type="text" name="username" required maxlength="20" title="Max 20 caratteri"/><br />
           <label for="psw">Password</label>
-          <input
-            type="password"
-            name="psw"
-            required
-            minlength="5"
-            maxlength="10"
-            title="Max 10 caratteri"
-          /><br />
+          <input type="password" name="psw" required minlength="5" maxlength="10" title="Max 10 caratteri"/><br />
           <input type="submit" value="Registrati" /><br />
           <input type="button" value="Indietro" id="close">
           </input>
