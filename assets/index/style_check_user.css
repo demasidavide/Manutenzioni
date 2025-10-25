@@ -1,19 +1,27 @@
+:root{
+    --text-title-color:#E62727;
+    --text-color:black;
+    --back-color: #F3F2EC;
+    --div-color: #DCDCDC;
+    --blu-color:#1e94ab;
+    --foot-color: #ffffff;
+}
 html{
     background: 100%;
 
 body{
-    background-color: rgb(149, 182, 153);
+    background-color:var(--back-color);
 }
 h1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     justify-content: center;
-    height: 27px;
+    height: 57px;
     width: 276px;
     margin:100px auto 0px auto;
+    border:solid 10px var(--text-title-color);
+    border-radius: 10px;
     display:block;  
-    padding-bottom: 10px;
+    padding: 10px;
 } 
 span{
     display:flex;
@@ -21,6 +29,25 @@ span{
     height: auto;
     width: auto;
     align-items: center;
+    >a{
+        text-decoration: none;
+        
+        >button{
+        font-size: 1.3rem;
+        border: none;
+        background-color: var(--div-color);
+        border-radius: 20px;
+        padding: 8px;
+        color: var(--text-color);
+            &:hover{
+                cursor: pointer;
+                    background-color: var(--foot-color);
+                    border: solid 3px var(--text-color);
+
+
+            }
+        }
+    }
 }   
 }    
     

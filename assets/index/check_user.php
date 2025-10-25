@@ -31,8 +31,8 @@ if($num_rows){
         
         <br>
         <span>
-        <button><a href="/index.html">Indietro</a></button>
-        </span>
+            <a href="/index.html"><button>Indietro</button></a>
+            </span>
     </body>
     <?php
 }
