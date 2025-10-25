@@ -52,13 +52,13 @@ include '../../db_connection.php';
         if (!$first) echo '<tr><td style="border-top: 3px solid white;"></td></tr>';
         $first = false;
     ?>
-        <tr><td><?php echo htmlspecialchars($row['nome']); ?></td></tr>
-        <td><?php echo htmlspecialchars($row['tipo']); ?>&nbsp&nbsp&nbsp&nbsp</td>
+        <tr><td>Nome macchina:&nbsp  <?php echo htmlspecialchars($row['nome']); ?></td></tr>
+        <td>Tipo:&nbsp<?php echo htmlspecialchars($row['tipo']); ?>&nbsp&nbsp&nbsp&nbsp</td>
             <td><img id="bid" src="/assets/img/bid.png" title="Cancella macchina" onclick="openmodal_delete_machine('<?php echo $row['id_mac']; ?>','<?php echo htmlspecialchars($row['nome']); ?>','<?php echo htmlspecialchars($row['tipo']); ?>','<?php echo htmlspecialchars($row['area']); ?>')"></td>
             <td><img id="piu" src="/assets/img/+.png" title="Aggiungi un intervento" onclick="openmodal_add_support(<?php echo $row['id_mac'];?>)"></td>
             <td><img id="fdx" src="/assets/img/frecciad.png" title="Visualizza interventi effettuati" onclick="openmodal_view_support(<?php echo $row['id_mac'];?>)" ></td></tr>
-        <tr><td><?php echo htmlspecialchars($row['area']); ?></td></tr>
-        <tr><td>ID:<?php echo htmlspecialchars($row['id_mac']); ?></td></tr>
+        <tr><td>Posizione:&nbsp<?php echo htmlspecialchars($row['area']); ?></td></tr>
+        <tr><td>ID Macchinario:&nbsp<?php echo htmlspecialchars($row['id_mac']); ?></td></tr>
     <?php } ?>
               </tbody>
     </table>
