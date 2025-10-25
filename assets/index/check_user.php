@@ -17,7 +17,7 @@ if($num_rows){
     $row=$result->fetch_assoc();
     $_SESSION["username"]=$row['username'];
     $_SESSION["id"]=$row['id'];
-    header ("Location: ../../main.php");
+    header ("Location: /assets/main/main.php");
    exit;
 }else{
     ?>
